@@ -1,0 +1,33 @@
+{% extends 'leaveapp/layout.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">แก้ไข ประเภทการลา</h1>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row"> 
+        <div class="col-xl-12 col-md-6">
+            <form action="">
+                <div class="form-group">
+                    <label for="inputSort">ประเภทการลา</label>
+                    <input type="text" class="form-control" name="inputSort" id="inputSort">
+                </div>
+                <div class="form-group">
+                    <label for="leave_condition">เงื่อนไขการลา</label>
+                    <textarea name="leave_condition" id="leave_condition" class="form-control" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inputAmount">จำนวนวันลา</label>
+                    <input type="text" class="form-control" name="inputAmount" id="inputAmount">
+                </div>
+                <button type="submit" class="btn btn-primary mb-4">บันทึก</button>
+            </form>   
+        </div>   
+    </div>
+    <!-- End Centent Row -->
+</div>
+<!-- End Content Row -->
+{% endblock %}

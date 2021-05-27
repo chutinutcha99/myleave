@@ -1,0 +1,132 @@
+{% extends 'leaveapp/layout.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">ตั้งค่าประเภทการลา</h1>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-xl-12">
+            <form action="" class="form-inline"> 
+                <div class="form-group mb-2">
+                    <label for="leave_unit" class="ml-2 mr-2">แสดง</label>
+                    <select class="form-control" name="leave_unit" id="leave_unit">
+                        <option value="">10</option>
+                        <option value="">20</option>
+                        <option value="">50</option>
+                        <option value="">100</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-danger ml-2 mb-2">Submit</button>
+                <a href="#" class="btn btn-primary ml-2 mb-2">เพิ่ม ประเภทการลา</a>
+            </form>
+        </div>
+    </div>
+    <!-- End Content Row-->
+    
+    <!-- Content Row -->
+    <div class="row"> 
+        <div class="col-xl-12 col-md-6">
+            <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ประเภทการลา</th>
+                    <th scope="col">จำนวนวันลา</th>
+                    <th scope="col">ดำเนินการ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>ลาพักผ่อน</td>
+                    <td>30</td>
+                    <td>
+                        <a href="#" class="btn btn-success">แก้ไข</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>ลาไปศึกษา ฝึกอบรม ปฏิบัติการวิจัย หรือดูงาน</td>
+                    <td>5</td>
+                    <td> 
+                        <a href="#" class="btn btn-success">แก้ไข</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>ลาเข้ารับการตรวจเลือกทหารหรือเข้ารับการเตรียมพล</td>
+                    <td>10</td>
+                    <td>
+                        <a href="#" class="btn btn-success">แก้ไข</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>ลาไปช่วยเหลือภรรยาที่คลอดบุตร</td>
+                    <td>30</td>
+                    <td>
+                        <a href="#" class="btn btn-success">แก้ไข</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>ลาคลอดบุตร</td>
+                    <td>60</td>
+                    <td>
+                        <a href="#" class="btn btn-success">แก้ไข</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>ลากิจส่วนตัว</td>
+                    <td>10</td>
+                    <td>
+                        <a href="#" class="btn btn-success">แก้ไข</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>ลาป่วย</td>
+                    <td>15</td>
+                    <td>
+                        <a href="#" class="btn btn-success">แก้ไข</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>      
+        </div>   
+    </div>
+    <!-- End Centent Row -->
+
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-12">
+            <nav>
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a href="" class="page-link" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="" class="page-link">1</a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                        <a href="" class="page-link">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item">
+                        <a href="" class="page-link">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="" class="page-link">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- End content Row -->
+</div>
+<!-- End Content Row -->
+{% endblock %}

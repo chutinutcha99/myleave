@@ -1,0 +1,114 @@
+{% extends 'leaveapp/layout.html'   %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">ไม่อนุมัติ</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+    </div>
+    <!-- Content Row -->    
+    <div class="row">
+        <div class="col-xl-12">
+            <form action="" class="form-inline">
+                <div class="form-group mb-2">
+                    <label for="leave_sort" class="ml-2 mr-2">แสดง</label>
+                    <select class="form-control" name="" id="leave_sort">
+                        <option value="">10</option>
+                        <option value="">20</option>
+                        <option value="">50</option>
+                        <option value="">100</option>
+                    </select>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="datepicker1" class="ml-2 mr-2">จาก</label>
+                    <input type="text" class="form-control" id="datepicker1" value="dd/mm/yy">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="datepicker2" class="ml-2 mr-2">ถึง</label>
+                    <input type="text" class="form-control" id="datepicker2" value="dd/mm/yy">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="leave_sort" class="ml-2 mr-2">ประเภทการลา</label>
+                    <select class="form-control" name="" id="leave_sort">
+                        <option value="">ลากิจส่วนตัว</option>
+                        <option value="">ลาคลอดบุตร</option>
+                        <option value="">ลากิจป่วย</option>
+                        <option value="">ลาพักร้อน</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-danger ml-2 mb-2">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- End Content Row -->
+
+    <!-- Content Row -->
+    <div class="row"> 
+        <div class="col-xl-12 col-md-6">
+            <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">วันที่ทำรายการ</th>
+                    <th scope="col">ประเภทการลา</th>
+                    <th scope="col">วันที่ลา</th>
+                    <th scope="col">จำนวนวัน</th>
+                    <th scope="col">เหตุผล</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">dd/mm/yy</th>
+                    <td>ลาป่วย</td>
+                    <td>dd/mm/yy</td>
+                    <td>2</td>
+                    <td>ไข้หวัดใหญ่</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">dd/mm/yy</th>
+                    <td>ลาป่วย</td>
+                    <td>dd/mm/yy</td>
+                    <td>2</td>
+                    <td>ไข้หวัดใหญ่</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">dd/mm/yy</th>
+                    <td>ลากิจส่วนตัว</td>
+                    <td>dd/mm/yy</td>
+                    <td>1</td>
+                    <td>ไม่รู้เลย</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>   
+    </div>
+    <!-- End Centent Row -->
+
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-12">
+            <nav>
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a href="" class="page-link" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="" class="page-link">1</a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                        <a href="" class="page-link">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item">
+                        <a href="" class="page-link">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="" class="page-link">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- End Content Row -->
+{% endblock %}

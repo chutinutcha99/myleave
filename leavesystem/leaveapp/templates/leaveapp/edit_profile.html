@@ -1,0 +1,91 @@
+{% extends 'leaveapp/layout.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">แก้ไขข้อมูลส่วนตัว</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+    </div>
+    
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-xl-12">
+            <form action="">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="email">อีเมล</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="email@email.com">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="password">รหัสผ่าน</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="รหัสผ่านต้องไม่น้อยกว่า 6 ตัวอักษร">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="repassword">ยืนยันรหัสผ่าน</label>
+                        <input type="password" class="form-control" name="repassword" id="repassword" placeholder="ใส่รหัสผ่านอีกครั้ง">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="firstname">ชื่อ</label>
+                        <input type="text" class="form-control" name="firstname" id="firstname">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastname">นามสกุล</label>
+                        <input type="text" class="form-control" name="lastname" id="lastname">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="gender">เพศ</label>
+                        <select name="gender" id="gender" class="form-control">
+                            <option value="">หญิง</option>
+                            <option value="">ชาย</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="mobile">โทรศัพท์</label>
+                        <input type="text" class="form-control" name="mobile" id="mobile">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="status">สถานะสมาชิก</label>
+                        <select name="status" id="status" class="form-control">
+                            <option value="">สมาชิก</option>
+                            <option value="">ผู้ดูแลระบบ</option>
+                            <option value="">เจ้าหน้าที่</option>
+                        </select>
+                    </div>
+                </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                      <legend class="col-form-label col-sm-2 pt-0">สิทธิ์การใช้งาน</legend>
+                      <div class="col-sm-10">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="checkbox1" id="checkbox1" value="option1" checked>
+                          <label class="form-check-label" for="checkbox1">
+                            สามารถตั้งค่าระบบได้
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="checkbox2" id="checkbox2" value="option2">
+                          <label class="form-check-label" for="checkbox2">
+                            สามารถตั้งค่าโมดูลได้
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="checkbox3" id="checkbox3" value="option3">
+                          <label class="form-check-label" for="checkbox3">
+                            สามารถอนุมัติลาได้
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                 </fieldset>
+                 <button type="submit" class="btn btn-primary">บันทึก</button>
+            </form>
+        </div>
+    </div>
+    <!-- End Content Row -->
+</div>
+
+{% endblock %}

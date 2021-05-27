@@ -1,0 +1,120 @@
+{% extends 'leaveapp/layout.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">รายชื่อสมาชิก</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+    </div>
+    <!-- Content Row -->    
+    <div class="row">
+        <div class="col-xl-12">
+            <form action="" class="form-inline">
+                <div class="form-group mb-2">
+                    <label for="leave_unit" class="ml-2 mr-2">แสดง</label>
+                    <select class="form-control" name="leave_unit" id="leave_unit">
+                        <option value="">10</option>
+                        <option value="">20</option>
+                        <option value="">50</option>
+                        <option value="">100</option>
+                    </select>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="leave_status" class="ml-2 mr-2">สถานะสมาชิก</label>
+                    <select name="leave_status" id="leave_status" class="form-control">
+                        <option value="">ทั้งหมด</option>
+                        <option value="">สมาชิก</option>
+                        <option value="">ผู้ดูแลระบบ</option>
+                        <option value="">เจ้าหน้าที่</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-danger ml-2 mb-2">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- End Content Row -->
+
+    <!-- Content Row -->
+    <div class="row"> 
+        <div class="col-xl-12 col-md-6">
+            <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">อีเมล/ชื่อผู้ใช้</th>
+                    <th scope="col">ชื่อ นามสกุล</th>
+                    <th scope="col">โทรศัพท์</th>
+                    <th scope="col">สถานะสมาชิก</th>
+                    <th scope="col">สร้างเมื่อ</th>
+                    <th scope="col">เข้าระบบล่าสุด</th>
+                    <th scope="col">แก้ไข</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">email@email.com</th>
+                    <td>ชุติณัชชา ฐิโนทัย</td>
+                    <td>0999999999</td>
+                    <td>สมาชิก</td>
+                    <td>dd/mm/yy</td>
+                    <td>dd/mm/yy</td>
+                    <td>
+                        <a href="#" class="btn btn-success" role="button">แก้ไข</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">email@email.com</th>
+                    <td>ชุติณัชชา ฐิโนทัย</td>
+                    <td>0999999999</td>
+                    <td>สมาชิก</td>
+                    <td>dd/mm/yy</td>
+                    <td>dd/mm/yy</td>
+                    <td>
+                        <a href="#" class="btn btn-success" role="button">แก้ไข</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">email@email.com</th>
+                    <td>ชุติณัชชา ฐิโนทัย</td>
+                    <td>0999999999</td>
+                    <td>สมาชิก</td>
+                    <td>dd/mm/yy</td>
+                    <td>dd/mm/yy</td>
+                    <td>
+                        <a href="#" class="btn btn-success" role="button">แก้ไข</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>   
+    </div>
+    <!-- End Centent Row -->
+
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-12">
+            <nav>
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a href="" class="page-link" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="" class="page-link">1</a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                        <a href="" class="page-link">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item">
+                        <a href="" class="page-link">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="" class="page-link">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- End Content Row -->
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'leaveapp/layout.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">ตั้งค่าแผนก</h1>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row"> 
+        <div class="col-xl-12 col-md-6">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">รายละเอียด</th>
+                    <th scope="col">ดำเนินการ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td><input type="text" class="form-control" name="department1" id="department1"></td>
+                    <td>
+                        <a href="#" class="btn btn-success">เพิ่ม</a>
+                        <a href="#" class="btn btn-danger">ลบ</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td><input type="text" class="form-control" name="department2" id="department2"></td>
+                    <td> 
+                        <a href="#" class="btn btn-success">เพิ่ม</a>
+                        <a href="#" class="btn btn-danger">ลบ</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td><input type="text" class="form-control" name="" id=""></td>
+                    <td>
+                        <a href="#" class="btn btn-success">เพิ่ม</a>
+                        <a href="#" class="btn btn-danger">ลบ</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="submit" class="btn btn-primary">บันทึก</button>     
+        </div>   
+    </div>
+    <!-- End Centent Row -->
+</div>
+<!-- End Content Row -->
+{% endblock %}

@@ -2,12 +2,11 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from .models import Profile, Leave_Form
-from .forms import ProfileForm, LeaveForm
+from .forms import ProfileForm, LeaveForm, UserForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
-def myIndex(request):
-    return render(request, 'leaveapp/welcome.html')
-
+@login_required
 def dashboard(request):
     return render(request, 'leaveapp/index.html')
 
@@ -25,7 +24,8 @@ def disapproved(request):
 
 def stats(request):
     return render(request, 'leaveapp/stats.html')
-
+    
+@login_required
 def leave_form(request):
     if request.method == 'POST':
         form = LeaveForm(request.POST, request.FILES)
@@ -127,17 +127,29 @@ def forget_password(request):
 
 # Data for Previews
 
-def profile_view(request):
-    context = {}
+def profile(request):
+    if request.method == 'POST':
 
-    form = ProfileForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-    
-    context['form'] = form
-    return render(request, "leaveapp/profile_view.html", context)
+        user_form = UserForm(request.POST,instance=request.user)
+        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, 'Done!')
+            return redirect('profile')
+
+    else:
+
+        user_form = UserForm(instance=request.user)
+        profile_form = ProfileForm(instance=request.user.profile)
+
+    context = {'user_form': user_form, 'profile_form': profile_form}
+
+
+    return render(request, 'leaveapp/profile.html', context)
     
 # Testing LeaveForm
-def add(request):
+'''def add(request):
     form = LeaveForm()
-    return render(request, 'leaveapp/form_add.html', {'form': form})
+    return render(request, 'leaveapp/form_add.html', {'form': form})'''

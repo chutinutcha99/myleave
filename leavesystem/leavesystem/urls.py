@@ -22,9 +22,9 @@ from leaveapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('templates/', views.myIndex),
-    path('', views.myIndex, name='myIndex'),
-    path('dashboard/', views.dashboard, name='dashboard'),
+    #path('templates/', views.myIndex),
+    #path('', views.myIndex, name='myIndex'),
+    path('', views.dashboard, name='dashboard'),
     path('layout/', views.layout, name='layout'),
     path('approved/', views.approved, name='approved'),
     path('w_a_approved/', views.w_a_approved, name='w_a_approved'),
@@ -50,8 +50,8 @@ urlpatterns = [
     path('sort_edit/', views.sort_edit, name='sort_edit'),
    
     
-    path('profile_view/', views.profile_view, name='profile_view'),
-    path('add/', views.add)
+    path('profile/', views.profile, name='profile'),
+    #path('add/', views.add)
     
 
     

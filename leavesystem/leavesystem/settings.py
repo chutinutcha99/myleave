@@ -143,7 +143,7 @@ LOGOUT_URL = '/'
 
 STATIC_URL = '/static/'
 
-APPEND_SLASH = True
+APPEND_SLASH = False
 
 
 

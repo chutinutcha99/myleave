@@ -1,6 +1,16 @@
 from django import forms
-from django.forms import ModelForm, widgets
+from django.contrib.auth.models import User
+from django.forms import ModelForm, fields, widgets
 from .models import Profile, Department_Setting, Member, Leave_Form, SORT_NAME, DEPARTMENT_NAME, DURATION1, DURATION2
+
+
+class UserForm(forms.ModelForm):
+
+    class Meta: 
+
+        model = User
+
+        fields = ["username", "email"]
 
 
 class ProfileForm(forms.ModelForm):
@@ -12,7 +22,6 @@ class ProfileForm(forms.ModelForm):
         fields = [
             "firstname",
             "lastname",
-            "email",
             "password",
             "repassword",
             "gender",

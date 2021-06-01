@@ -1,14 +1,14 @@
 import datetime
 
 from django.db import models
+from django.db.models.base import Model
 from django.utils import timezone
 from django.contrib.auth.models import User
-from django.dispatch import receiver
-from django.db.models.signals import post_save
+
 
 # Create your models here.
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, default='')
+    user = models.OneToOneField(User, max_length=50, related_name='profile', on_delete=models.CASCADE, default='')
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
     email = models.CharField(max_length=200)

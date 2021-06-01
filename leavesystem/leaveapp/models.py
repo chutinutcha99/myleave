@@ -7,8 +7,8 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
-class Profile(models.Model):
-    user = models.OneToOneField(User, max_length=50, related_name='profile', on_delete=models.CASCADE, default='')
+class myProfile(models.Model):
+    user = models.OneToOneField(User, max_length=50, on_delete=models.CASCADE, default='')
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
@@ -22,11 +22,11 @@ class Profile(models.Model):
     leave_form = models.ForeignKey('Leave_Form', on_delete=models.CASCADE)
 
     class Meta:
-        db_table = "leaveapp_profile"
+        db_table = "leaveapp_myprofile"
 
     def __str__(self):
         return str(self.user)
-
+        
 class Department_Setting(models.Model):
     department_name = models.CharField(max_length=200)
 

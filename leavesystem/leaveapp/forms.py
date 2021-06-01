@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.forms import ModelForm, fields, widgets
-from .models import Profile, Department_Setting, Member, Leave_Form, SORT_NAME, DEPARTMENT_NAME, DURATION1, DURATION2
+from .models import myProfile, Department_Setting, Member, Leave_Form, SORT_NAME, DEPARTMENT_NAME, DURATION1, DURATION2
 
 
 class UserForm(forms.ModelForm):
@@ -17,7 +17,7 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
 
-        model = Profile
+        model = myProfile
 
         fields = [
             "firstname",

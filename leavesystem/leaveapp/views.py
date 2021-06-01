@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from .models import Profile, Leave_Form
+from .models import myProfile, Leave_Form
 from .forms import ProfileForm, LeaveForm, UserForm
 from django.contrib.auth.decorators import login_required
 # Create your views here.
@@ -126,12 +126,12 @@ def forget_password(request):
     return render(request, 'leaveapp/forget_password.html')
 
 # Data for Previews
-
+@login_required
 def profile(request):
     if request.method == 'POST':
 
         user_form = UserForm(request.POST,instance=request.user)
-        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        profile_form = ProfileForm(request.POST, instance=request.user.myprofile)
 
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
@@ -142,7 +142,7 @@ def profile(request):
     else:
 
         user_form = UserForm(instance=request.user)
-        profile_form = ProfileForm(instance=request.user.profile)
+        profile_form = ProfileForm(instance=request.user.myprofile)
 
     context = {'user_form': user_form, 'profile_form': profile_form}
 
